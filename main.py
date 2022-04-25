@@ -1,15 +1,22 @@
 from fastapi import Depends, FastAPI, Body, Request ,HTTPException
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-import uvicorn
+import uvicorn 
+from email import message
+from  matplotlib.pyplot import flag 
+from user import UserInfo
+import time 
 import json
+from  typing import List 
+
+
 
 app = FastAPI()
 oauth_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
+listOfUsers= []
 
 @app.get("/")
 def home():
-    return "Ch11eck"
+    return "welcome to bank project"
 
 @app.post("/token")
 def login(form_data: OAuth2PasswordRequestForm = Depends()):
@@ -46,4 +53,18 @@ def credit_history(token:str = Depends(oauth_scheme)):
         "username" :token,
         "spend_hist":cred_history_data[token]
     }
-    
+
+@app.post("/createuser")
+async def createuser(bUser: UserInfo):
+    flag = False
+    for user in listOfUsers:
+        if user.username == bUser.username:
+            message =  {"message": "The username " +  user.username+ " is already exist!"}
+            flag = True
+    if flag == False:
+        listOfUsers.append(bUser)
+        message = {f"message": "The user " + bUser.firstname + " " + bUser.lastname + " created successfuly!"}
+    return message
+
+
+
