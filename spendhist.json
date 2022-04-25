@@ -1,0 +1,47 @@
+{
+    "shiran123": {
+        "jan": {
+            "total_spend": 15450,
+            "liability": 4888,
+            "asset": 1300
+        },
+        "fab": {
+            "total_spend": 15450,
+            "liability": 4888,
+            "asset": 1300
+        },
+        "march": {
+            "total_spend": 15450,
+            "liability": 4888,
+            "asset": 1300
+        },
+        "april": {
+            "total_spend": 15450,
+            "liability": 4888,
+            "asset": 1300
+        }
+    },
+    "lizmiz":{
+        "jan": {
+            "total_spend": 20000,
+            "liability": 4501,
+            "asset": 1200
+        },
+        "fab": {
+            "total_spend": 12000,
+            "liability": 3000,
+            "asset": 2000
+        },
+        "march": {
+            "total_spend": 18000,
+            "liability": 5000,
+            "asset": 1000
+        },
+        "april": {
+            "total_spend": 15450,
+            "liability": 4888,
+            "asset": 1300
+        }
+    }
+
+}
