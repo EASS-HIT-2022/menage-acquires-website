@@ -13,5 +13,5 @@
 ## HOW TO RUN
  1.Inside to the project directory with the command: cd "PROJECTDIRECTORY" 
  2.Run the Dockerfile with the following commands:
-  'docker build -t backend ./ -f Dockerfile'
-  'docker run -p 8000:8000 backend'
+  ```docker build -t backend ./ -f Dockerfile```
+  ```docker run -p 8000:8000 backend```
