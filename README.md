@@ -6,3 +6,7 @@
 *Update client charges 
 
 *Print the bank clients
+
+# BACKEND
+
+![image](https://user-images.githubusercontent.com/95073733/165377014-78256d8b-2c31-42a4-a246-58957f781b5a.png)
