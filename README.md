@@ -14,4 +14,11 @@
  1.Inside to the project directory with the command: cd "PROJECTDIRECTORY" 
  2.Run the Dockerfile with the following commands:
   ```docker build -t backend ./ -f Dockerfile```
+  
   ```docker run -p 8000:8000 backend```
+
+Now the server is running and you can see this on the following url: ```http://localhost:8000/docs```
+
+# TESTS
+
+to run the tests run on the command line : `pytest`
