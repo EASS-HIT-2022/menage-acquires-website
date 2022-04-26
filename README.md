@@ -22,4 +22,4 @@ Now the server is running and you can see this on the following url: ```http://l
 
 # TESTS
 
-to run the tests run on the command line : `pytest`
+to run the tests run on the your shell : `pytest`
