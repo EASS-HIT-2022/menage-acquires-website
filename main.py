@@ -49,4 +49,4 @@ def write_json(new_data, filename ,nameoflist):
         file.seek(0)
         # convert back to json.
         json.dump(file_data, file, indent = 4)
-        
+    
