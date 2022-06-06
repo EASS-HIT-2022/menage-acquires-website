@@ -8,7 +8,9 @@ import time
 import json
 from typing import List 
 from acquire import acquire
-
+import requests
+import yfinance as yf
+import asyncio
 
 app = FastAPI()
 oauth_scheme = OAuth2PasswordBearer(tokenUrl="token")
@@ -21,7 +23,7 @@ def home():
 @app.post("/acquires")
 async def acquires(newacquire: acquire):
     data= {"client name":newacquire.clientname, "aquire":newacquire.totalprice}
-    write_json(data ,"aquirehist.json","historyList")
+    write_json( data ,"aquirehist.json","historyList")
     message = {f"message": "The history of  " + newacquire.clientname + " acquire added"}
     return message
 
@@ -41,7 +43,7 @@ async def createuser(newUser: clientInfo):
 
 def write_json(new_data, filename ,nameoflist):
     with open(filename,'r+') as file:
-          # First we load existing data into a dict.
+        # First we load existing data into a dict.
         file_data = json.load(file)
         # Join new_data with file_data inside emp_details
         file_data[nameoflist].append(new_data)
@@ -49,4 +51,14 @@ def write_json(new_data, filename ,nameoflist):
         file.seek(0)
         # convert back to json.
         json.dump(file_data, file, indent = 4)
-    
+        
+@app.get("/getacquire") 
+def get_user_acquires(acquire):
+    data= yf.Ticker(acquire)
+    data['Date']= data.index
+    acquire_table={
+        "Date": data["Date"].astype(str).tolist(),
+        "Clinetname": data["Clinetname"].astype(str).tolist(),
+        "Acquire": data["Acquire"].astype(str).tolist(),
+    }
+    return{"Acquire": acquire_table}#acquire_table}
