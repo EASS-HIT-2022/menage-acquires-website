@@ -16,12 +16,10 @@
  3.Run the docker compose file with the following commands:
  
   ```docker compose up --build```
-  
 
-Now the server is running and you can see the page on the following url: ```http://localhost:8501````
+Now the server is running and you can see the page on the following url: ```http://localhost:8501```
 
 # TESTS -Backend
-
 to run the tests run on the your shell : `pytest`
 
 
