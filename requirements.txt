@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-uvicorn[standard]
-yfinance
-pydantic
-httpx
-pytest
-matplotlib

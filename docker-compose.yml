@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  py-backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    #container_name: py-backend
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    #container_name: py-fronted
