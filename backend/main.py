@@ -1,15 +1,8 @@
-from fastapi import Depends, FastAPI, Body, Request ,HTTPException
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-import uvicorn 
+from fastapi import Depends, FastAPI, Body, Request  
 from pydantic import BaseModel
-from email import message
 from  matplotlib.pyplot import flag 
-#from clients import clientInfo
 import json
 from typing import List 
-# from acquire import acquire
-import yfinance as yf
-import asyncio
 from datetime import date 
 
 
@@ -24,6 +17,7 @@ class clientInfo(BaseModel):
     username: str
     password: str
 
+@app.get("/")
 def home():
     return "welcome to bank project"
 

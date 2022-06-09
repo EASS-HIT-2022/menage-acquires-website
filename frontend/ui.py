@@ -10,8 +10,8 @@ st.set_page_config(page_title="MyBank", page_icon=":moneybag:", layout="wide")
 st.sidebar.image('bank-logo.jpg',channels='BGR',use_column_width='auto',output_format='jpg')
 
 
-add_aquire_URL = 'http://127.0.0.1:8000/add_acquires'
-creatuser_URL = 'http://127.0.0.1:8000/add_account'
+add_aquire_URL = 'http://backend:8000/add_acquires'
+creatuser_URL = 'http://backend:8000/add_account'
 
 menu = ["Add Acquire", "Create User"]
 
