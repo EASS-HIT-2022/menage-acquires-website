@@ -13,13 +13,12 @@ def test_read_main():
     assert response.json() == "welcome to bank project"
 
 def test_add_client():
-    response= client.post("/createuser",json={
-    "firstname": "shiran",
-    "lastname": "davidov",
+    response= client.post("/add_account",json={
+    "name": "shiran",
     "username": "shiran_dav",
     "password": "Aa123456"
     })
     assert response.status_code == 200
-    assert response.json() == {f"message": "The client shiran davidov created successfuly!"}
+    assert response.json() == "User added to the db succesfully!"
 
 
