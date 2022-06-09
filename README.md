@@ -8,6 +8,10 @@
 # BACKEND
 
 ![image](https://user-images.githubusercontent.com/95073733/172896332-d7e4ca45-7c68-4c79-8271-da333bb647fd.png)
+
+# Frontend
+![image](https://user-images.githubusercontent.com/95073733/172892834-9c3cc071-b6ef-4862-9608-7fd8d7cb5435.png)
+
 ## HOW TO RUN
  1.Inside to the project directory with the command: cd "PROJECTDIRECTORY"
 
