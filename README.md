@@ -7,7 +7,7 @@
 
 # BACKEND
 
-![image](https://user-images.githubusercontent.com/95073733/165377014-78256d8b-2c31-42a4-a246-58957f781b5a.png)
+![image](https://user-images.githubusercontent.com/95073733/172896332-d7e4ca45-7c68-4c79-8271-da333bb647fd.png)
 ## HOW TO RUN
  1.Inside to the project directory with the command: cd "PROJECTDIRECTORY"
 
