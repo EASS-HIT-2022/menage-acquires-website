@@ -3,7 +3,7 @@
 ###### Things that the app do:
 *Add new client to the banking system
 
-*add new client acquire 
+*Add new client acquire 
 
 # BACKEND
 
