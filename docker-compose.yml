@@ -11,3 +11,10 @@ services:
     ports:
       - "8501:8501"
     container_name: fronted
+
+  mongoDB:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    container_name: mongoDB
+
