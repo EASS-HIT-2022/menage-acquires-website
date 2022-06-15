@@ -1,10 +1,14 @@
+from urllib import response
 from fastapi import Depends, FastAPI, Body, Request  
 from pydantic import BaseModel
 from  matplotlib.pyplot import flag 
 import json
 from typing import List 
 from datetime import date 
-
+import sys
+from database import (
+    _add_collection_aquire
+)
 
 app = FastAPI()
 
@@ -24,6 +28,7 @@ def home():
 @app.post("/add_acquires")
 async def acquires(newacquire: acquire):
     data= {"clientname" :newacquire.clientname , "aquire" :newacquire.totalprice}
+    response= await _add_collection_aquire(data)
     fileName='aquirehist.json'
     with open(fileName,"r") as file:
         # First we load existing data into a dict.
@@ -34,6 +39,7 @@ async def acquires(newacquire: acquire):
     with open("aquirehist.json","w") as file:
         json.dump(file_data, file)
     return ("Data added succesfully!")
+
      
 
 @app.post("/add_account")
