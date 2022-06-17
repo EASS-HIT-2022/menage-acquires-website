@@ -5,21 +5,28 @@ from  matplotlib.pyplot import flag
 import json
 from typing import List 
 from datetime import date 
-import sys
+
 from database import (
-    _add_collection_aquire
+    _add_collection_aquire,
+    _add_collection_user,
+    _get_user_report
 )
 
 app = FastAPI()
 
 class acquire(BaseModel):
-    clientname: str
+    username: str
+    category: str
     totalprice: str
+    month: str
+
+class reportInfo(BaseModel):
+    month: str
+    username: str
 
 class clientInfo(BaseModel):
     name: str
     username: str
-    password: str
 
 @app.get("/")
 def home():
@@ -27,41 +34,19 @@ def home():
 
 @app.post("/add_acquires")
 async def acquires(newacquire: acquire):
-    data= {"clientname" :newacquire.clientname , "aquire" :newacquire.totalprice}
-    response= await _add_collection_aquire(data)
-    fileName='aquirehist.json'
-    with open(fileName,"r") as file:
-        # First we load existing data into a dict.
-        file_data = json.load(file)
-        # Join new_data with file_data inside emp_details
-    file_data.append(data)
-    # convert back to json.
-    with open("aquirehist.json","w") as file:
-        json.dump(file_data, file)
+    data= {"name":newacquire.username,"category" :newacquire.category , "month": newacquire.month, "aquire" :newacquire.totalprice}
+    response= _add_collection_aquire(data)
+    print(response)
     return ("Data added succesfully!")
 
      
-
 @app.post("/add_account")
 async def addaccount(newUser: clientInfo):
     data={"name":newUser.name,"username":newUser.username}
-    filename='clientsdb.json'
-    with open(filename,"r") as file:
-    # First we load existing data into a dict.
-        file_data = json.load(file)
-    file_data.append(data)
-    # convert back to json.
-    with open(filename,"w") as file:
-        json.dump(file_data, file)
+    response= _add_collection_user(data)
     return ("User added to the db succesfully!")
 
-app.get("/")
-
-
-
-
-
-
-
-
-
+@app.get("/report_info")
+async def getReportInfo(report: reportInfo):
+    data =_get_user_report(report.username,report.month)
+    return data
