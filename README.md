@@ -1,5 +1,5 @@
-# BANK APPLICATION 
-##### This app allows you to manage a bank.
+# Menage Acquires Website
+##### This app allows you to manage your aqcuires.
 ###### Things that the app do:
 *Add new client to the banking system
 
