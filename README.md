@@ -7,9 +7,6 @@
 *Add new client acquire 
 
 
-*Get acquire report for a client
-
-
 ## How TO Run The Project:
 ### Backend + Frontend + DB :
 
