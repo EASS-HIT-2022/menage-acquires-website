@@ -31,7 +31,7 @@ When you clicking on the url you will see:
 You also can see the frontend, which running on port 8501, you can access it by [click here](http://localhost:8501/) or copy the url: `http://localhost:8501` to your browser.
 When you clicking on the url you will see:
 
-![image](https://user-images.githubusercontent.com/95073733/175815738-3de8ab69-22f9-4c94-9cbf-eb788489a632.png)
+![image](https://user-images.githubusercontent.com/95073733/175999560-95f227f9-d50f-4d8c-b36c-e9777591fb67.png)
 
 # TESTS -Backend
 To run tests nevigate to backend directory using `cd` command in your shell, and run `pytest`.
