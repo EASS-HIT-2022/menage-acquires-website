@@ -14,9 +14,6 @@ st.sidebar.image('cash.png',channels='BGR',use_column_width='auto',output_format
 add_aquire_URL = 'http://backend:8000/add_acquires'
 ReportInfo_URL = 'http://backend:8000/report_info'
 creatuser_URL= 'http://backend:8000/add_account'
-# add_aquire_URL = 'http://localhost:8000/add_acquires'
-# ReportInfo_URL = 'http://localhost:8000/report_info'
-# creatuser_URL= 'http://localhost:8000/add_account'
 
 menu = ["Home","Add Acquire",  "Create User"]
 

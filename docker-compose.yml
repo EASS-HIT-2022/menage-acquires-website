@@ -12,12 +12,12 @@ services:
       - 8501:8501
     container_name: frontend
 
-  mongo:
+  dbmongo:
     image: mongo:latest
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
     ports:
-      - 27017:27017
-    container_name: mongo
+      - 5000:27017
+    container_name: dbmongo
 

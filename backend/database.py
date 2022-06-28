@@ -1,7 +1,7 @@
 import pymongo
 from pymongo import MongoClient
 
-myclient = MongoClient("mongodb://root:root@mongo:27017/?authMechanism=DEFAULT")
+myclient = MongoClient("mongodb://root:root@dbmongo:27017/?authMechanism=DEFAULT")
 mydb = myclient["mydatabase"]
 acquire_hist = mydb["acquire_hist"]
 user_info = mydb["user_info"]
