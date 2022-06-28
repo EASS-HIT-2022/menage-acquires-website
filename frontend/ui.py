@@ -4,20 +4,21 @@ import json
 import yfinance as yf
 
 
+
 # FastAPI endpoints for add and delete stocks
 st.set_page_config(page_title="Menage Acquires Website", page_icon=":moneybag:", layout="wide")
 
 st.sidebar.image('cash.png',channels='BGR',use_column_width='auto',output_format='jpg')
 
 
-# add_aquire_URL = 'http://backend:8000/add_acquires'
-# ReportInfo_URL = 'http://backend:8000/report_info'
-# creatuser_URL= 'http://backend:8000/add_account'
-add_aquire_URL = 'http://localhost:8000/add_acquires'
-ReportInfo_URL = 'http://localhost:8000/report_info'
-creatuser_URL= 'http://localhost:8000/add_account'
+add_aquire_URL = 'http://backend:8000/add_acquires'
+ReportInfo_URL = 'http://backend:8000/report_info'
+creatuser_URL= 'http://backend:8000/add_account'
+# add_aquire_URL = 'http://localhost:8000/add_acquires'
+# ReportInfo_URL = 'http://localhost:8000/report_info'
+# creatuser_URL= 'http://localhost:8000/add_account'
 
-menu = ["Add Acquire",  "Create User","Get Acquire Report"]
+menu = ["Home","Add Acquire",  "Create User"]
 
 choice = st.sidebar.selectbox("Menu", menu)
 
@@ -37,22 +38,25 @@ if choice == "Create User":
         response = requests.post(creatuser_URL, json = user_dic)
         if response.status_code== 200:
             st.success("Success to create the user!")
-
-elif choice == "Get Acquire Report":
+elif choice == "Home" : 
     st.title("Menage Acquires")
-    st.subheader("Get Acquire Report")
+    st.subheader("Add your acquires to our system! ")
     form= st.form("Report",clear_on_submit=True)
+# elif choice == "Get Acquire Report":
+#     st.title("Menage Acquires")
+#     st.subheader("Get Acquire Report")
+#     form= st.form("Report",clear_on_submit=True)
 
-    month = form.text_input("enter the month:")
-    username = form.text_input("enter your username:")
+#     month = form.text_input("enter the month:")
+#     username = form.text_input("enter your username:")
 
-    if form.form_submit_button('Report'):
-        user_dic={
-            "month": month,
-            "username": username,
-        }
-        data = requests.get(ReportInfo_URL, json = user_dic)
-        st.write(data)
+#     if form.form_submit_button('Get Report'):
+#         user_dic={
+#             "month": month,
+#             "username": username,
+#         }
+#         data = fetch(session,ReportInfo_URL)
+#         st.write(data)
         # for item in data:
         #     st.write(f"{item['username']}, {item['category']}, {item['totalprice']}, {item['month']}")
          

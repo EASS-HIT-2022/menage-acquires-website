@@ -49,4 +49,5 @@ async def addaccount(newUser: clientInfo):
 @app.get("/report_info")
 async def getReportInfo(report: reportInfo):
     data =_get_user_report(report.username,report.month)
+    print(data)
     return data

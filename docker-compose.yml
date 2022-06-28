@@ -3,18 +3,21 @@ services:
   backend:
     build: ./backend
     ports:
-      - "8000:8000"
+      - 8000:8000
     container_name: backend
 
   frontend:
     build: ./frontend
     ports:
-      - "8501:8501"
-    container_name: fronted
+      - 8501:8501
+    container_name: frontend
 
-  mongoDB:
+  mongo:
     image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
     ports:
       - 27017:27017
-    container_name: mongoDB
+    container_name: mongo
 
