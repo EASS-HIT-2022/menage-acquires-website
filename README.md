@@ -13,7 +13,7 @@
 1.Download the repository to your pc 
 
 
-2.Inside to the project directory with the command: cd "MenageAcquiresWebsite"
+2.Inside to the project directory with the command: cd "menage-acquires-website"
 
 
 3.Run the docker compose file with the following commands:
@@ -23,7 +23,7 @@ docker-compose up
 ```
 
 After the docker copmpose finished, you can see the backend running on port 8000  
-you can see the backend by [click here](http://localhost:8001/) or copy the url: `http://localhost:8000/docs` to your browser.
+you can see the backend by [click here](http://localhost:8000/) or copy the url: `http://localhost:8000/docs` to your browser.
 When you clicking on the url you will see: 
 
 ![image](https://user-images.githubusercontent.com/95073733/175815655-7e0de6b0-42f8-4793-b5f0-d61530d68f6e.png)
