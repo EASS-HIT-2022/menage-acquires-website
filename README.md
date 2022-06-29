@@ -33,6 +33,10 @@ When you clicking on the url you will see:
 
 ![image](https://user-images.githubusercontent.com/95073733/175999560-95f227f9-d50f-4d8c-b36c-e9777591fb67.png)
 
+If you want to see details aboout the containers, you can run on your shell `docker ps` and you will get the output:
+![image](https://user-images.githubusercontent.com/95073733/176356015-25b28fe0-6232-4f54-9c96-05bd918175d1.png)
+
+
 # TESTS -Backend
 To run tests nevigate to backend directory using `cd` command in your shell, and run `pytest`.
 
