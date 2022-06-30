@@ -6,6 +6,11 @@
 
 *Add new client acquire 
 
+A short video of my project:
+
+
+https://user-images.githubusercontent.com/95073733/176695759-84c668e1-465c-4952-972d-70bed93a1558.mp4
+
 
 ## How TO Run The Project:
 ### Backend + Frontend + DB :
