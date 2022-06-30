@@ -14,7 +14,7 @@ https://user-images.githubusercontent.com/95073733/176696033-38ab536a-33bc-42fd-
 
 
 
-## How TO Run The Project:
+## How To Run The Project:
 ### Backend + Frontend + DB :
 
 1.Download the repository to your pc 
